@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y wget --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 RUN wget --progress=dot:giga https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem -P /opt/certificates/
 
+COPY --chown=1001:1001 docker-entrypoint.sh /opt/CTFd
+RUN chmod +x /opt/CTFd/docker-entrypoint.sh
+
 USER 1001
 EXPOSE 8000
 ENTRYPOINT ["/opt/CTFd/docker-entrypoint.sh"]
