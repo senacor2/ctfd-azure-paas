@@ -1945,7 +1945,7 @@
                     "value": "[parameters('ctfDbSecretName')]"
                   },
                   "secretValue": {
-                    "value": "[format('mysql+pymysql://{0}%40{1}.mariadb.database.azure.com:{2}@{3}.mariadb.database.azure.com/ctfd?ssl_ca=/opt/certificates/BaltimoreCyberTrustRoot.crt.pem', parameters('administratorLogin'), variables('mariaServerName'), parameters('administratorLoginPassword'), variables('mariaServerName'))]"
+                    "value": "[format('mysql+pymysql://{0}%40{1}.mariadb.database.azure.com:{2}@{3}.mariadb.database.azure.com/ctfd?ssl_ca=/opt/certificates/DigiCertGlobalRootG2.crt.pem', parameters('administratorLogin'), variables('mariaServerName'), parameters('administratorLoginPassword'), variables('mariaServerName'))]"
                   }
                 },
                 "template": {
